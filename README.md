@@ -1,16 +1,13 @@
-## Hi there 👋
+```python
+import matplotlib.pyplot as plt
+from contextlib import contextmanager
 
-<!--
-**UmarZein/UmarZein** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+@contextmanager
+def figsize_as(width, height):
+    original_figsize = plt.rcParams['figure.figsize']
+    try:
+        plt.rcParams['figure.figsize'] = [width, height]
+        yield
+    finally:
+        plt.rcParams['figure.figsize'] = original_figsize
+```
