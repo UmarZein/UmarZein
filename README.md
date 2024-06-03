@@ -10,4 +10,10 @@ def figsize_as(width, height):
         yield
     finally:
         plt.rcParams['figure.figsize'] = original_figsize
+
+# Example usage:
+with figsize_as(4, 4):
+    fig, ax = plt.subplots()
+    ax.plot([0, 1], [0, 1])
+    plt.show()
 ```
