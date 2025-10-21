@@ -4,7 +4,7 @@ import pandas as pd
 import torch
 from torch import nn
 import lightning as pl
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader, Dataset, random_split
 import matplotlib.pyplot as plt
 from contextlib import contextmanager
 
